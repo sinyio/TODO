@@ -1,0 +1,88 @@
+body {
+    background-color: rgb(233, 248, 255);
+}
+
+.todos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.todos li div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.todos li.complete {
+    color: white;
+    background-color: rgb(191, 218, 251);
+    text-decoration: line-through;
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid black;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease;
+}
+
+input[type='checkbox']::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='30' fill='white' class='bi bi-check2' viewBox='0 -2 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    transform: scale(0);
+    transition: all 0.2s ease;
+}
+
+input[type='checkbox']:checked {
+    background-color: rgb(176, 186, 255);
+    border-color: rgb(176, 186, 255);
+}
+
+input[type='checkbox']:checked::before {
+    transform: scale(1);
+}
+
+.todos li button {
+    border: 0;
+    padding: .25rem;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+}
+
+.todos li button svg path {
+    transition: all 0.2s ease;
+}
+
+.todos li button:hover svg path {
+    fill: black;
+}
+
+.todos li button:active svg {
+    transform: scale(.8);
+}
+
+.todos li span {
+    padding: 2px;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.todos li span:focus {
+    background-color: rgb(191, 218, 251);
+    outline: none;
+}
+
+.todos li span[contenteditable]:hover {
+    background-color: rgb(191, 218, 251);
+}
