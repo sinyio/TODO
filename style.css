@@ -1,5 +1,46 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-weight: 100;
+    font-size: 18px;
+}
+
 body {
-    background-color: rgb(233, 248, 255);
+    font-family: sans-serif;
+    background: 
+    linear-gradient(210deg, rgba(88, 18, 132, 0.8), rgba(255, 0, 0, 0) 62%), 
+    linear-gradient(127deg, rgba(123, 229, 255, 0.8), rgba(0, 255, 0, 0) 72%), 
+    linear-gradient(336deg, rgba(23, 23, 163, 0.8), rgba(0, 0, 255, 0) 62%);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 532px;
+    padding: 50px 20px;  
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.todos {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+    max-height: 60vh;
+    overflow: auto;
 }
 
 .todos li {
@@ -10,6 +51,7 @@ body {
     padding: 1.5rem 1rem;
     border-radius: 0.5rem;
     background-color: white;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
 }
 
 .todos li div {
@@ -20,8 +62,32 @@ body {
 
 .todos li.complete {
     color: white;
-    background-color: rgb(191, 218, 251);
+    background-color: rgb(56, 40, 89);
     text-decoration: line-through;
+}
+
+.todo-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-input {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+}
+
+.main-input:hover {
+    outline: 1px solid rgb(56, 40, 89);
+}
+
+.main-input:focus {
+    outline: 1px solid rgb(56, 40, 89);
 }
 
 input[type='checkbox'] {
@@ -52,6 +118,31 @@ input[type='checkbox']:checked::before {
     transform: scale(1);
 }
 
+.add-task {
+    border: none;
+    outline: 1px solid white;
+    padding: 1rem 1.2rem;
+    background-color: white;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+}
+
+.add-task:hover {
+    background-color: rgb(56, 40, 89);
+    color: white;
+}
+
+.stats {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    list-style: none;
+    color: white;
+}
+
 .todos li button {
     border: 0;
     padding: .25rem;
@@ -73,7 +164,7 @@ input[type='checkbox']:checked::before {
 }
 
 .todos li span {
-    padding: 2px;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
 }
@@ -85,4 +176,8 @@ input[type='checkbox']:checked::before {
 
 .todos li span[contenteditable]:hover {
     background-color: rgb(191, 218, 251);
+}
+
+.remove-task svg {
+    pointer-events: none;
 }

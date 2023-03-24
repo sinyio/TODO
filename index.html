@@ -16,37 +16,31 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="./style.css">
     
-    <script defer src="app.js"></script>
+    <script defer src="index.js"></script>
     <title>ToDo</title>
 </head>
 <body>
-   <header id="header">
-        <div class="container">
-            <h1>Today</h1>
-            <form action="" id="todo-form">
-                <input type="text" name="task-name" autofocus>
-                <button>Add task</button>
-            </form>
-        </div>
-   </header>
-   <section>
-        <div class="container" id="main-content">
-            <ul class="stats">
-                <li>
-                    <span>Remaining</span>
-                    <span id="remaining-tasks">0</span>
-                </li>
-                <li>
-                    <span>Completed</span>
-                    <span id="completed-tasks">0</span>
-                </li>
-                <li>
-                    <span>Total</span>
-                    <span id="total-tasks">0</span>
-                </li>
-            </ul>
-            <ul class="todos"></ul>
-        </div>
-   </section>
+    <div class="container">
+        <h1 class="title">T O D O</h1>
+        <form class="todo-form">
+            <input type="text" class="main-input" autofocus>
+            <button class="add-task">ADD</button>
+        </form>
+        <ul class="stats">
+            <li>
+                <span>Remaining:</span>
+                <span class="remaining-tasks">0</span>
+            </li>
+            <li>
+                <span>Completed:</span>
+                <span class="completed-tasks">0</span>
+            </li>
+            <li>
+                <span>Total:</span>
+                <span class="total-tasks">0</span>
+            </li>
+        </ul>
+        <ul class="todos"></ul>
+    </div>
 </body>
 </html>
