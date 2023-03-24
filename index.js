@@ -69,6 +69,8 @@ function createTask(task) {
     countTasks()
 }
 
+
+
 // Counting tasks
 function countTasks() {
     const completedTasksArray = tasks.filter((task) => task.isCompleted === true)
@@ -131,3 +133,5 @@ todoList.addEventListener('keydown', e => {
         e.target.blur()
     }
 })
+
+// Scroll
